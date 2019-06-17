@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Etec
+    </ion-title>
+    <ion-icon routerLink="/config" class="icon" slot="end" name="more"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Notícias</h1>
+
+  <ion-card *ngFor="let noticia of noticias">
+    <ion-card-header>
+      <ion-card-title>
+        <h5>&nbsp;{{noticia.titulo}}</h5>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img [src]="noticia.img" />
+      <p>{{noticia.resumo}}</p>
+      <ion-button (click)="mostraNoticia(noticia)">Continuar Lendo</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  
+
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <h5>{{noticia.titulo}}</h5>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img [src]="noticia.img" />
+      <p [innerHtml]="noticia.conteudo"></p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

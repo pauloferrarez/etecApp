@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Notificações
+    </ion-title>
+    <ion-icon routerLink="/config" class="icon" slot="end" name="more"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-card *ngFor="let item of notificacoes">
+    <ion-card-header>
+      <ion-item>
+        <ion-avatar item-start>
+          <img [src]="item.imgAutor">
+        </ion-avatar>
+        <ion-card-title>
+          <h5>&nbsp; {{item.autor}}</h5>
+        </ion-card-title>
+      </ion-item>
+      <ion-card-subtitle>{{item.data}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content class="black">
+      <p [innerHtml]="item.conteudo"></p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
